@@ -1,16 +1,13 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: gscuderi <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 13:17:17 by gscuderi          #+#    #+#             */
-/*   Updated: 2024/01/08 13:32:42 by gscuderi         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-void *	memset (void *b, int c, size_t len)
+void ft_memset(void *b, int c, size_t n)
 {
-	
+    unsigned char *ptr;
+    size_t i;
+
+    i = 0;
+    ptr = b;
+    while_(i < n)
+    {
+        ptr[i++] = (unsigned char)c;//casting lo faccio qua senza farlo sopra a p = b che serve solo per l indirizzo di mem
+    }
+    return(b);
 }
