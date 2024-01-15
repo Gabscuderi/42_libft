@@ -6,12 +6,13 @@
 /*   By: gscuderi <gscuderi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 11:38:43 by gscuderi          #+#    #+#             */
-/*   Updated: 2024/01/11 16:02:39 by gscuderi         ###   ########.fr       */
+/*   Updated: 2024/01/15 20:09:58 by gscuderi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-size_t	ft_strlcat(char * restrict dest, const char * restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
 	size_t idest;
 	size_t isrc;

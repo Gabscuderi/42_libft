@@ -6,10 +6,11 @@
 /*   By: gscuderi <gscuderi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 13:01:51 by gscuderi          #+#    #+#             */
-/*   Updated: 2024/01/11 16:03:05 by gscuderi         ###   ########.fr       */
+/*   Updated: 2024/01/15 20:10:56 by gscuderi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
