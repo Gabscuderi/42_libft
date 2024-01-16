@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gscuderi <gscuderi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gscuderi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 16:04:01 by gscuderi          #+#    #+#             */
-/*   Updated: 2024/01/16 18:19:07 by gscuderi         ###   ########.fr       */
+/*   Created: 2024/01/16 18:08:12 by gscuderi          #+#    #+#             */
+/*   Updated: 2024/01/16 18:30:03 by gscuderi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	unsigned char *ts1;
+	unsigned char *ts2;
 
-	i = 0;
-	if ( n == 0 )
-		return (0);
-	while (s1[i] && s2[i] && (i < n))
-		i++;
-	return((int)s1[i] - s2[i]);
-}
+	ts1 = (unsigned char *)s1;
+	ts2 = (unsigned char *)s2;
+	while ( *ts1 && *ts2 && n > 0)
+	{
+		n--;
+		ts1++;
+		ts2++;
+	}
+	return ((int) *ts1 - *ts2);
