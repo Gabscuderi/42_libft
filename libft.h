@@ -1,4 +1,3 @@
-
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -32,5 +31,9 @@ char		*ft_strrchr(const char *s, int c);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
 
+void        *ft_calloc(size_t n_elem, size_t el_size);
+char        *ft_strdup(const char *str);
+
+char        *ft_strjoin(char const *s1, char const *s2)
 
 #endif
