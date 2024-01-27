@@ -1,5 +1,5 @@
 #ifndef LIBFT_H
-# define LIBFT_H
+#define LIBFT_H
 
 # include <string.h>
 # include <unistd.h>
@@ -34,6 +34,7 @@ int			ft_toupper(int c);
 void        *ft_calloc(size_t n_elem, size_t el_size);
 char        *ft_strdup(const char *str);
 
-char        *ft_strjoin(char const *s1, char const *s2)
+char        *ft_strjoin(char const *s1, char const *s2);
+char    *ft_substr(char const *str, unsigned int start, size_t len);
 
 #endif

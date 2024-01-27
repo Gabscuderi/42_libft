@@ -14,5 +14,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
     f_ptr = ft_strdup(s1);
     while (s2)
         f_ptr[len_s1++] = *s2++;
+    f_ptr[len_s1] = '\0';
     return (f_ptr);
 }

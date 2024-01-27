@@ -2,22 +2,19 @@
 
 char    *ft_strdup(const char *str)
 {
-    size_t  len;
     char    *dup_str;
     size_t  i;
 
-    if (str)
+    if (!str)
         return NULL;
-    len = ft_strlen(str);
-    dup_str = (char *)malloc(len * sizeof(const char));
-	if (dup_str == NULL)
+    dup_str = (char *)malloc(ft_strlen(str) * sizeof(char));
+	if (!dup_str)
 		return NULL;
     i = 0;
-    while(len > 1)
+    while(str[i])
     {
         dup_str[i] = str[i];
         i++;
-        len--;
     }
     dup_str[i] = '\0';
     return (dup_str);

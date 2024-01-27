@@ -11,7 +11,7 @@ void    *ft_calloc(size_t n_elem, size_t el_size)
     if (n_elem == 0 || el_size == 0)
         return (NULL);
     ptr = malloc( n_elem * el_size );
-    if (ptr != NULL) 
-        memset(ptr, 0, n_elem * el_size);
+    if (!ptr) 
+        ft_memset(ptr, 0, n_elem * el_size);
     return (ptr);
 }
