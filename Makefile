@@ -11,6 +11,10 @@ SOURCES = ft_bzero.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_ispr
 
 OBJS = $(SOURCES:.c=.o)
 
+BONUS_SOURCES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c 
+				ft_lstclear.c ft_lstiter.c ft_lstmap.c 
+
+BONUS_OBJS = $(BONUS_SOURCES)
 
 CC = gcc
 
@@ -18,13 +22,18 @@ FLAGS = -Wall -Wextra -Werror
 
 RM = rm -f 
 
-AR = ar rcs 
+AR = ar rcs
+
+all : $(NAME)
 
 $(NAME) : $(OBJS) 
 	${AR} ${NAME} ${OBJS}
 
 %.o: %.c $(HEADER_FILES)
 	${CC} -c $< ${FLAGS} -o $@
+
+bonus : $(BONUS_OBJ)
+	${AR} ${NAME} ${BONUS_OBJS}
 
 clean:
 	${RM} ${OBJS} ${BONUS_OBJS}
