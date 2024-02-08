@@ -10,8 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* while cuntlist == loop over the list; move forward using ->next */
+
 #include "libft.h"
-	/* while cuntlist == loop over the list; move forward using ->next */
+
 int	ft_lstsize(t_list *lst)
 {
 	t_list	*countlst;
@@ -21,7 +23,7 @@ int	ft_lstsize(t_list *lst)
 	if (!lst)
 		return (0);
 	countlst = lst;
-	while(countlst)
+	while (countlst)
 	{
 		countlst = countlst->next;
 		i++;

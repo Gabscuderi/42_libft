@@ -6,7 +6,7 @@
 /*   By: gscuderi <gscuderi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 16:21:28 by gscuderi          #+#    #+#             */
-/*   Updated: 2024/02/08 16:42:43 by gscuderi         ###   ########.fr       */
+/*   Updated: 2024/02/08 18:06:29 by gscuderi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 	len = ft_strlen(src);
 	if (n == 0)
 		return (len);
-	while (src[i] || i < n - 1)
+	while (src[i] && i < n - 1)
 	{
 		dest[i] = src[i];
 		i++;

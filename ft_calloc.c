@@ -10,21 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*count * size > UINT_MAX è una sintassi valida per verificare
+se il prodotto di count e size supera il massimo
+valore rappresentabile da size_t
+calloc === is used to dynamically allocate memory for an array
+and initialize all its elements to zero.*/
+
 #include "libft.h"
-//in questo caso senza usare sizeof visto che sappiamo size quanti
-//byte ci sono in una casella ma non il tipo
-//allochiamo direttamente i byte da occupare per il numero di elementi
-//poi usiamo memset, cosi se la allcoazione non è avvenuta, creiamo ptr
-//riempiendolo di 0
 
 void	*ft_calloc(size_t n_elem, size_t el_size)
 {
 	void	*ptr;
 
-	if (n_elem == 0 || el_size == 0)
+	if (n_elem && el_size && (n_elem * el_size) > UINT_MAX)
 		return (NULL);
 	ptr = malloc(n_elem * el_size);
 	if (!ptr)
-		ft_memset(ptr, 0, n_elem * el_size);
+		return (NULL);
+	ft_bzero(ptr, n_elem * el_size);
 	return (ptr);
 }
