@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gscuderi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gscuderi <gscuderi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 18:08:12 by gscuderi          #+#    #+#             */
-/*   Updated: 2024/01/16 18:30:03 by gscuderi         ###   ########.fr       */
+/*   Updated: 2024/02/06 18:40:34 by gscuderi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		ts2++;
 	}
 	return ((int) *ts1 - *ts2);
+}

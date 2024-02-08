@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gscuderi <gscuderi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/08 16:24:50 by gscuderi          #+#    #+#             */
+/*   Updated: 2024/02/08 16:24:50 by gscuderi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void    ft_putendl_fd(char *str, int fd)
+void	ft_putendl_fd(char *str, int fd)
 {
-    while (*str++)
-        write(fd, str++, 1);
-    write(fd, "\n", 1);    
+	while (*str++)
+		write(fd, str++, 1);
+	write(fd, "\n", 1);
 }

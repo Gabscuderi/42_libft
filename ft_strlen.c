@@ -6,7 +6,7 @@
 /*   By: gscuderi <gscuderi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 13:01:51 by gscuderi          #+#    #+#             */
-/*   Updated: 2024/01/15 20:10:56 by gscuderi         ###   ########.fr       */
+/*   Updated: 2024/02/06 17:30:26 by gscuderi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int i;
+	int	i;
+
 	i = 0;
 	while (s[i])
 		i++;

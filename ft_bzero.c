@@ -6,20 +6,19 @@
 /*   By: gscuderi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 18:50:49 by gscuderi          #+#    #+#             */
-/*   Updated: 2024/01/15 18:51:15 by gscuderi         ###   ########.fr       */
+/*   Updated: 2024/02/06 16:59:07 by gscuderi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *ptr, size_t n)
+void	ft_bzero(void *ptr, size_t n)
 {
-    unsigned char *ptr;
-    size_t i;
+	char	*tmp_ptr;
+	size_t	i;
 
-    i = 0;
-    while_(i < n)
-    {
-        ptr[i++] = 0;//   NULL
-    }
+	i = 0;
+	tmp_ptr = (char *) ptr;
+	while (i < n)
+		tmp_ptr[i++] = 0;
 }

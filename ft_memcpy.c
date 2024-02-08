@@ -10,34 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t len)
 {
-    size_t i; 
-    unsigned char *ptrdest; // = (unsigned char *)dest;
-    const char *ptrsrc; // = (unsigned const char *)src;
+	size_t	i;
 
-    ptrdest = dest;
-    ptrsrc = src;
-    i = 0;
-    if (dest == NULL || src == NULL) // Controllo se i puntatori sono validi
-        return;
-    if ( dest < src || dest >= (src + n))
-    {
-        while (i < n )
-        {
-            ptrdest[i] = ptrsrc[i++];
-        }
-    }
-    else 
-    {         // Se c'è sovrapposizione, utilizzare una copia inversa per garantire il comportamento corretto
-        i = n;
-        while (i > 0) 
-        {
-            ptrdest[i - 1] = ptrsrc[i - 1];
-            i--;
-        }
-    }
-    return(dest);
+	if (!dest && !src)
+		return (0);
+	i = 0;
+	while (i < len)
+	{
+		*(unsigned char *)(dest + i) = *(unsigned char *)(src + i);
+		i++;
+	}
+	return (dest);
 }

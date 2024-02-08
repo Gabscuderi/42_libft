@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gscuderi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gscuderi <gscuderi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:56:47 by gscuderi          #+#    #+#             */
-/*   Updated: 2024/01/16 18:23:01 by gscuderi         ###   ########.fr       */
+/*   Updated: 2024/02/06 18:39:38 by gscuderi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if( *temp == c )
 			return ((void *)temp);
-		*temp++;
+		temp++;
 		n--;
 	}
 	return (NULL);
