@@ -25,8 +25,8 @@ void	*ft_calloc(size_t n_elem, size_t el_size)
 	if (n_elem && el_size && (n_elem * el_size) > UINT_MAX)
 		return (NULL);
 	ptr = malloc(n_elem * el_size);
-	if (!ptr)
-		return (NULL);
+	if (ptr == NULL)
+		return ((void *)ptr);
 	ft_bzero(ptr, n_elem * el_size);
-	return (ptr);
+	return ((void *)ptr);
 }

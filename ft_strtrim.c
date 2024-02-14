@@ -22,7 +22,8 @@ from the beginning and the end of the string.*/
         restituisci NULL
     fine se
     se il primo carattere di s1 è un terminatore di stringa:
-        restituisci una nuova stringa duplicata contenente solo il terminatore di stringa
+        restituisci una nuova stringa duplicata contenente solo
+        il terminatore di stringa
     fine se
 
     start = 0
@@ -41,7 +42,8 @@ from the beginning and the end of the string.*/
         restituisci NULL
     fine se
 
-    copia una sottostringa di s1 dalla posizione start fino alla posizione end in trimmed
+    copia una sottostringa di s1 dalla posizione start fino alla
+    posizione end in trimmed
     restituisci trimmed
 fine funzione
 */
@@ -72,5 +74,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(trimmed, s1 + start, new_len);
 	return (trimmed);
 }
-
-

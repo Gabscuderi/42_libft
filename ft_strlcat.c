@@ -6,25 +6,35 @@
 /*   By: gscuderi <gscuderi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 11:38:43 by gscuderi          #+#    #+#             */
-/*   Updated: 2024/02/08 16:42:30 by gscuderi         ###   ########.fr       */
+/*   Updated: 2024/02/14 17:11:01 by gscuderi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//+1 xche abbiamo idest che inizia da 0 mentre il size parte da 1
+/*
+appends the NUL-terminateed string src to the end of dst.
+It will append at most size (strlen of dst - 1 byte),
+NUL-terminating the result
+*/
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dest, const char *src, size_t destsize)
 {
-	size_t	idest;
-	size_t	isrc;
+	size_t	i;
+	size_t	j;
 
-	idest = 0;
-	isrc = 0;
-	while (dest[idest] != '\0' || idest < dstsize)
-		idest++;
-	while (src[isrc] != '\0')
-		dest[idest++] = src[isrc++];
-	dest[idest] = '\0';
-	return (idest + 1);
+	if (destsize == 0)
+		return (ft_strlen(src));
+	i = ft_strlen(dest);
+	j = 0;
+	if (destsize <= ft_strlen(dest))
+		return (destsize + ft_strlen(src));
+	while (src[j] && i + 1 < destsize)
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
+	return (ft_strlen(dest) + ft_strlen(&src[j]));
 }

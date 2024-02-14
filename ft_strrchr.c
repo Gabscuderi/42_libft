@@ -6,11 +6,12 @@
 /*   By: gscuderi <gscuderi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:01:07 by gscuderi          #+#    #+#             */
-/*   Updated: 2024/02/08 16:45:02 by gscuderi         ###   ########.fr       */
+/*   Updated: 2024/02/14 16:51:27 by gscuderi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//non inizio da len - 1 perche se c fosse null lo becca alla prima e ciao
+//returns a pointer to the last occurrence of the caracter c
+//in the string s.
 
 #include "libft.h"
 
@@ -19,13 +20,13 @@ char	*ft_strrchr(const char *s, int c)
 	int	i;
 
 	i = ft_strlen(s);
+	if (!s)
+		return (NULL);
 	while (i >= 0)
 	{
-		if (s[i] == c)
-			break ;
+		if (s[i] == (const char) c)
+			return ((char *) s + i);
 		i--;
 	}
-	if (i == -1)
-		return (NULL);
-	return ((char *)s + i);
+	return (NULL);
 }

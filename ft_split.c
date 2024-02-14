@@ -33,19 +33,19 @@ char	**ft_split(const char *str, char c)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (j < ft_strcounter(str, c))
+	while (*str)
 	{
-		while (str[i] != c)
+		if (*str != c)
 		{
-			matrix[j][i] = str[i];
-			i++;
+			j = 0;
+			while (*str && *str != c && ++j)
+				++str;
+			matrix[i++] = ft_substr(str - j, 0, j);
 		}
-		matrix[j][i] = '\0';
-		while (str[i] == c)
-			i++;
-		j++;
+		else
+			str++;
 	}
-	matrix[j][0] = '\0';
+	matrix[i] = 0;
 	return (matrix);
 }
 
